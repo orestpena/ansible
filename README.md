@@ -11,3 +11,21 @@ To install Ansible on Centos:
 https://docs.ansible.com/ansible/latest/installation_guide/installation_distros.html#installing-ansible-on-fedora-or-centos
 for other OS':
 https://docs.ansible.com/ansible/latest/installation_guide/index.html
+
+```
+ansiblecontroller
+
+an ssh fingerprint should be created to each target for security purposes.
+But this can be turned off, but no recommended for production, but good enough for testing and learning in the meantime.
+
+Goto /etc/ansible/ansible.cfg
+
+# uncomment this to disable SSH key host checking
+#host_key_checking = False
+
+just remove the comment in front of host_key_checking
+from the ansiblecontroller
+create an inventory.txt file for each target
+and then create a ping test script to ping each target
+ansible_ping_test.sh
+```
